@@ -120,6 +120,17 @@ bun run format
 bun run check
 ```
 
+#### Running Tests
+
+```sh
+bun run test
+```
+
+> [!WARNING]
+>
+> `bun test` is Bun's testing utility.
+> Docs: https://bun.sh/docs/cli/test
+
 #### Deploy
 
 ```sh
