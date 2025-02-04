@@ -4,15 +4,19 @@ pre-commit:
     lint:
       priority: 1
       glob: "*.{js,ts}"
-      run: |
-        bun run biome lint --error-on-warnings --write {staged_files}
+      run:
+        | # Temporary workaround for Windows (without this, internalError/io occurs for some reason)
+        echo "{staged_files}"
+        bun run biome lint --error-on-warnings --write "{staged_files}"
       stage_fixed: true
 
     format:
       priority: 2
       glob: "*.{js,ts}"
-      run: |
-        bun run biome format --error-on-warnings --write {staged_files}
+      run:
+        | # Temporary workaround for Windows (without this, internalError/io occurs for some reason)
+        echo "{staged_files}"
+        bun run biome format --error-on-warnings --write "{staged_files}"
       stage_fixed: true
 
 post-merge:
