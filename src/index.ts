@@ -2,8 +2,8 @@ import { Hono } from "hono";
 import api from "~/api";
 import { APIError, apiErrorHandler } from "~/handler";
 import { authMiddleware } from "~/middleware";
+import { cron } from "~/schedule";
 import type { Bindings } from "~/types";
-import { cron } from "./schedule";
 
 const app = new Hono<{ Bindings: Bindings }>();
 
