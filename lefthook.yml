@@ -5,18 +5,18 @@ pre-commit:
       priority: 1
       glob: "*.{js,ts}"
       run: |
-        pnpm biome lint --error-on-warnings --write {staged_files}
+        bun run biome lint --error-on-warnings --write {staged_files}
       stage_fixed: true
 
     format:
       priority: 2
       glob: "*.{js,ts}"
       run: |
-        pnpm biome format --error-on-warnings --write {staged_files}
+        bun run biome format --error-on-warnings --write {staged_files}
       stage_fixed: true
 
 post-merge:
   commands:
     pnpm:
-      glob: "{package.json,pnpm-lock.yaml}"
-      run: pnpm install
+      glob: "{package.json,bun.lock}"
+      run: bun install
