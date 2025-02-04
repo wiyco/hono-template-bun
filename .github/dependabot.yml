@@ -1,0 +1,52 @@
+# https://docs.github.com/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+enable-beta-ecosystems: true # https://github.com/dependabot/dependabot-core/issues/6528
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    open-pull-requests-limit: 3
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "10:00"
+      timezone: "Asia/Tokyo"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    open-pull-requests-limit: 10
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "10:00"
+      timezone: "Asia/Tokyo"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      bun:
+        update-types: ["major", "minor", "patch"]
+        patterns:
+          - "@types/bun"
+      hono:
+        update-types: ["major", "minor", "patch"]
+        patterns:
+          - "hono"
+      cloudflare:
+        update-types: ["major", "minor", "patch"]
+        patterns:
+          - "wrangler"
+          - "@cloudflare/*"
+      biome:
+        update-types: ["major", "minor", "patch"]
+        patterns:
+          - "@biomejs/*"
+      deps:
+        dependency-type: "production"
+        update-types: ["minor", "patch"]
+        patterns:
+          - "*"
+      dev-deps:
+        dependency-type: "development"
+        update-types: ["minor", "patch"]
+        patterns:
+          - "*"
