@@ -1,0 +1,31 @@
+name: Test
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - "src/**"
+      - "test/**"
+      - "package.json"
+      - "bun.lock"
+      - ".github/workflows/test.yml"
+
+jobs:
+  vitest:
+    name: Vitest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: "package.json"
+
+      - name: Install dependencies
+        run: bun i --frozen-lockfile
+
+      - name: Run Vitest tests
+        run: bun run vitest --watch=false
