@@ -95,11 +95,12 @@ bun run dev
 bun run start
 ```
 
-Use [ngrok](https://ngrok.com) to make localhost:8787 publicly accessible.
+Use [ngrok](https://ngrok.com) to make `localhost:8787` publicly accessible.
 
 > [!IMPORTANT]
 >
 > Install ngrok from [ngrok - Setup & Installation](https://dashboard.ngrok.com/get-started/setup) according to your environment.
+>
 > For Windows, download the `Download for Windows (64-Bit)` file, extract it, and place the exe file in the repository's root directory.
 
 #### Linting
@@ -129,12 +130,15 @@ bun run test
 > [!WARNING]
 >
 > `bun test` is Bun's testing utility.
+>
 > Docs: https://bun.sh/docs/cli/test
 
 #### Deploy
 
 ```sh
-bun run deploy:mini
+bun run deploy:prod
+###### or ######
+bun run deploy:stg
 ```
 
 #### Generate API Endpoint Authentication Key
@@ -149,8 +153,10 @@ bun run gen:secret
 
 ## Documents
 
+- [API Endpoint](#api-endpoint)
 - [About Authentication](#about-authentication)
 - [Changing Execution Schedule](#changing-execution-schedule)
+- [Deployment Environments](#deployment-environments)
 
 ### API Endpoint
 
@@ -172,6 +178,7 @@ app.use("/api/v1/ping/*", authMiddleware);
 > [!TIP]
 >
 > This is configured to work only in production and staging environments.
+>
 > For details, refer to [`src/middleware/auth.ts`](./src/middleware/auth.ts).
 
 #### Client Request Example
@@ -204,3 +211,27 @@ Modify `crons` in [`wrangler.toml`](./wrangler.toml).
 > [!TIP]
 >
 > The timezone for cron is `UTC`.
+
+### Deployment Environments
+
+This project supports `staging` and `production` environments (`development` is equivalent to `local`).
+
+When deploying to Cloudflare Workers, specifying the environment using the `--env` option will set the application name (subdomain) to `{name}-{env}` as defined in `wrangler.toml`. (For example, running `bun deploy:prod` will create `hono-template-bun-production`)
+
+Non-secret environment variables for each environment can be configured in `wrangler.toml`.
+
+> [!TIP]
+>
+> The `[env.staging]` section in `wrangler.toml` follows an object-like structure.
+>
+> For example, these configurations are equivalent:
+>
+> ```toml
+> [env.production]
+> vars = { NODE_ENV = "production" }
+> #---------- or ----------
+> [env.production.vars]
+> NODE_ENV = "production"
+> ```
+>
+> Due to this object-like structure, other properties such as `observability` can also be defined per environment.
