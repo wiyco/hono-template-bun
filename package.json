@@ -3,12 +3,14 @@
   "version": "1.0.0-0",
   "private": true,
   "engines": {
+    "npm": "please use \"pnpm\" to install dependencies 🐢",
     "bun": ">=1.2"
   },
   "scripts": {
     "dev": "wrangler dev",
     "dev:cron": "wrangler dev --test-scheduled",
-    "deploy:mini": "wrangler deploy --minify",
+    "deploy:stg": "wrangler deploy --minify --env=staging",
+    "deploy:prod": "wrangler deploy --minify --env=production",
     "start": "ngrok http 8787",
     "lint": "biome lint . --error-on-warnings",
     "fix:lint": "biome lint . --error-on-warnings --write",
