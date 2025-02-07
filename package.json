@@ -3,7 +3,7 @@
   "version": "1.0.0-0",
   "private": true,
   "engines": {
-    "npm": "please use \"pnpm\" to install dependencies 🐢",
+    "npm": "please use \"bun\" to install dependencies 🐢",
     "bun": ">=1.2"
   },
   "scripts": {
