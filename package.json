@@ -29,7 +29,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@cloudflare/workers-types": "^4.20250214.0",
-    "@types/bun": "1.2.2",
+    "@types/bun": "1.2.3",
     "lefthook": "^1.10.10",
     "tsx": "^4.19.2",
     "vite-tsconfig-paths": "^5.1.4",
