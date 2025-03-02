@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "hono": "^4.7.2",
-    "valibot": "1.0.0-rc.0"
+    "valibot": "1.0.0-rc.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
