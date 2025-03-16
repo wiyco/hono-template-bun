@@ -19,25 +19,25 @@ updates:
       day: "sunday"
       time: "10:00"
       timezone: "Asia/Tokyo"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
+    # ignore:
+    #   - dependency-name: "*"
+    #     update-types: ["version-update:semver-major"]
     groups:
       bun:
-        update-types: ["major", "minor", "patch"]
+        update-types: ["minor", "patch"]
         patterns:
           - "@types/bun"
       hono:
-        update-types: ["major", "minor", "patch"]
+        update-types: ["minor", "patch"]
         patterns:
           - "hono"
       cloudflare:
-        update-types: ["major", "minor", "patch"]
+        update-types: ["minor", "patch"]
         patterns:
           - "wrangler"
           - "@cloudflare/*"
       biome:
-        update-types: ["major", "minor", "patch"]
+        update-types: ["minor", "patch"]
         patterns:
           - "@biomejs/*"
       deps:
