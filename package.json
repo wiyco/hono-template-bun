@@ -28,13 +28,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@cloudflare/workers-types": "^4.20250303.0",
+    "@cloudflare/workers-types": "^4.20250313.0",
     "@types/bun": "1.2.5",
     "lefthook": "^1.11.3",
     "tsx": "^4.19.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.8",
-    "wrangler": "^3.114.0"
+    "wrangler": "^3.114.1"
   },
   "peerDependencies": {
     "typescript": "5.7.3"
