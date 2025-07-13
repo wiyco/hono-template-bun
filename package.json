@@ -27,7 +27,7 @@
     "valibot": "1.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.1.1",
     "@cloudflare/workers-types": "^4.20250712.0",
     "@types/bun": "1.2.18",
     "lefthook": "^1.12.2",
