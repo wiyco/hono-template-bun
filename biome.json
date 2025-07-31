@@ -1,20 +1,17 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
   "vcs": {
     "enabled": false,
     "clientKind": "git",
     "useIgnoreFile": false
   },
   "files": {
-    "ignoreUnknown": false,
-    "ignore": ["**/node_modules/**", ".git/**", ".wrangler/**", "dist/**"]
+    "ignoreUnknown": false
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
-  },
-  "organizeImports": {
-    "enabled": true
+    "indentStyle": "space",
+    "expand": "always"
   },
   "linter": {
     "enabled": true,
@@ -29,7 +26,37 @@
   },
   "javascript": {
     "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
       "quoteStyle": "double"
     }
-  }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        ".wrangler/**",
+        "dist/**"
+      ],
+      "linter": {
+        "enabled": false
+      },
+      "formatter": {
+        "enabled": false
+      }
+    }
+  ]
 }

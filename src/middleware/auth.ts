@@ -7,9 +7,13 @@ import { generateHMAC } from "~/utils/crypto";
 const DEFEAULT_TIMESTAMP_TOLERANCE = 5 * 60 * 1000; // 5 minutes (milliseconds)
 
 export async function authMiddleware(
-  c: Context<{ Bindings: Bindings }>,
+  c: Context<{
+    Bindings: Bindings;
+  }>,
   next: Next,
-  options?: { timestampTolerance?: number },
+  options?: {
+    timestampTolerance?: number;
+  },
 ) {
   const { timestampTolerance = DEFEAULT_TIMESTAMP_TOLERANCE } = options || {};
 

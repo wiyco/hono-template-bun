@@ -4,8 +4,17 @@ import type { Bindings } from "~/types";
 import { PingService } from "./service";
 
 export namespace PingController {
-  export async function getPong(c: Context<{ Bindings: Bindings }>) {
+  export async function getPong(
+    c: Context<{
+      Bindings: Bindings;
+    }>,
+  ) {
     const message = await PingService.pong();
-    return apiSuccessHandler({ message }, c);
+    return apiSuccessHandler(
+      {
+        message,
+      },
+      c,
+    );
   }
 }

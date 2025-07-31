@@ -2,22 +2,33 @@
   "compilerOptions": {
     "incremental": true,
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": [
+        "./src/*"
+      ]
     },
-    "types": ["bun-types", "@cloudflare/workers-types/2023-07-01"],
+    "types": [
+      "bun-types",
+      "@cloudflare/workers-types/2023-07-01"
+    ],
     "resolveJsonModule": true,
     "noEmit": true,
     // "isolatedModules": true,
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
