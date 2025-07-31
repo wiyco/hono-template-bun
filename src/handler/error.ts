@@ -16,7 +16,9 @@ export class APIError extends Error {
 
 export function apiErrorHandler(
   err: unknown,
-  c: Context<{ Bindings: Bindings }>,
+  c: Context<{
+    Bindings: Bindings;
+  }>,
 ) {
   if (err instanceof APIError) {
     return c.json(

@@ -106,10 +106,14 @@ export class GoogleAuth {
         binaryDer,
         {
           name: "RSASSA-PKCS1-v1_5",
-          hash: { name: "SHA-256" },
+          hash: {
+            name: "SHA-256",
+          },
         },
         false,
-        ["sign"],
+        [
+          "sign",
+        ],
       );
     } catch (err) {
       console.error("Private key import error:", err);
@@ -126,7 +130,9 @@ export class GoogleAuth {
       const signature = await crypto.subtle.sign(
         {
           name: "RSASSA-PKCS1-v1_5",
-          hash: { name: "SHA-256" },
+          hash: {
+            name: "SHA-256",
+          },
         },
         key,
         data,

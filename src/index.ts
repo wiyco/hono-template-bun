@@ -5,7 +5,9 @@ import { authMiddleware } from "~/middleware";
 import { cron } from "~/schedule";
 import type { Bindings } from "~/types";
 
-const app = new Hono<{ Bindings: Bindings }>();
+const app = new Hono<{
+  Bindings: Bindings;
+}>();
 
 app.notFound((c) =>
   apiErrorHandler(new APIError("Not found or Method not allowed", 404), c),
