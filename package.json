@@ -27,11 +27,11 @@
     "valibot": "1.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.2",
+    "@biomejs/biome": "2.2.0",
     "@cloudflare/workers-types": "^4.20250816.0",
     "@types/bun": "1.2.20",
-    "lefthook": "^1.12.2",
-    "tsx": "^4.20.3",
+    "lefthook": "^1.12.3",
+    "tsx": "^4.20.4",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "wrangler": "^4.30.0"
