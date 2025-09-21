@@ -23,7 +23,7 @@
     "test:auth": "tsx --env-file=.dev.vars ./scripts/test-auth.ts"
   },
   "dependencies": {
-    "hono": "^4.9.7",
+    "hono": "^4.9.8",
     "valibot": "1.1.0"
   },
   "devDependencies": {
