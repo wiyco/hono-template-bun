@@ -30,7 +30,7 @@
     "@biomejs/biome": "2.2.5",
     "@cloudflare/workers-types": "^4.20250927.0",
     "@types/bun": "1.2.23",
-    "lefthook": "^1.13.4",
+    "lefthook": "^1.13.6",
     "tsx": "^4.20.6",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
