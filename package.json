@@ -33,7 +33,7 @@
     "lefthook": "^2.0.4",
     "tsx": "^4.20.6",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.9",
+    "vitest": "^4.0.15",
     "wrangler": "^4.47.0"
   },
   "peerDependencies": {
