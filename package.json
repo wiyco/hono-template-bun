@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "npm": "please use \"bun\" to install dependencies 🐢",
-    "bun": ">=1.2"
+    "bun": ">=1.2.5"
   },
   "scripts": {
     "dev": "wrangler dev",
