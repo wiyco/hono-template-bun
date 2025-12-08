@@ -21,6 +21,6 @@ pre-commit:
 
 post-merge:
   commands:
-    pnpm:
+    bun:
       glob: "{package.json,bun.lock}"
       run: bun install
