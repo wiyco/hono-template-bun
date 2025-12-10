@@ -18,7 +18,7 @@
     "format": "biome format . --error-on-warnings --write",
     "check": "biome check . --error-on-warnings",
     "check:fix": "biome check . --error-on-warnings --write",
-    "test": "vitest --watch",
+    "test": "vitest",
     "gen:secret": "tsx --env-file=.dev.vars ./scripts/secret.ts",
     "test:auth": "tsx --env-file=.dev.vars ./scripts/test-auth.ts"
   },
