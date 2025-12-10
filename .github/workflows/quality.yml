@@ -27,4 +27,4 @@ jobs:
         run: bun i --frozen-lockfile
 
       - name: Quality check
-        run: bun run biome check --error-on-warnings
+        run: bun run check
