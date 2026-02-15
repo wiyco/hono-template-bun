@@ -17,7 +17,7 @@
     "editor.insertSpaces": true
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "prettier.prettier-vscode",
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
@@ -27,7 +27,7 @@
     "editor.insertSpaces": true
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "prettier.prettier-vscode",
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
